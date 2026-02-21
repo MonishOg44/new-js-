@@ -8,7 +8,7 @@
 <body>
     <img src="screenshot.png" alt="Screenshot">
     <script>
-        // --- Async/Await with Promises ---
+       
 function fetchData() {
   return new Promise((resolve) => {
     setTimeout(() => resolve("Data fetched successfully!"), 1000);
@@ -18,7 +18,7 @@ function fetchData() {
 async function main() {
   console.log("Starting demo...");
 
-  // Using async/await
+ 
   try {
     const result = await fetchData();
     console.log(result);
@@ -26,27 +26,27 @@ async function main() {
     console.error("Error:", err);
   }
 
-  // --- Variable Hoisting ---
-  console.log(a); // undefined (var is hoisted but not initialized)
+
+  console.log(a); 
   var a = 42;
 
-  // let/const hoisting (temporal dead zone)
+ 
   try {
-    console.log(b); // ReferenceError
+    console.log(b); 
     let b = 100;
   } catch (e) {
     console.log("Accessing 'b' before declaration throws:", e.message);
   }
 
-  // --- Function Declaration Hoisting ---
-  sayHello(); // Works fine
+
+  sayHello(); 
   function sayHello() {
     console.log("Hello from a function declaration!");
   }
 
-  // --- Function Expression Hoisting ---
+  
   try {
-    sayHi(); // TypeError: sayHi is not a function
+    sayHi();
   } catch (e) {
     console.log("Calling sayHi before definition:", e.message);
   }
@@ -55,11 +55,12 @@ async function main() {
     console.log("Hello from a function expression!");
   };
 
-  // Now it works
+
   sayHi();
 }
 
 main();
     </script>
 </body>
+
 </html>
